@@ -3,7 +3,5 @@ project(stdc C)
 
 set(CMAKE_C_STANDARD 17)
 
-add_executable(stdc
-        main.c)
-
-target_link_libraries(stdc pthread)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/jmpbuf)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/pthread)
