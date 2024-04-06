@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.28)
-project(stdcpp11 CXX)
+project(stdcpp98 CXX)
 
 set(CMAKE_CXX_STANDARD 11)
 
@@ -10,5 +10,5 @@ FetchContent_Declare(fmt
 )
 FetchContent_MakeAvailable(fmt)
 
-add_executable(stdcpp11-array main.cpp)
-target_link_libraries(stdcpp11-array PRIVATE fmt)
+add_executable(stdcpp98-list main.cpp)
+target_link_libraries(stdcpp98-list PRIVATE fmt)
