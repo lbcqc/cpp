@@ -18,6 +18,13 @@ class MyList{
       tail = tail->next.get();
     }
   }
+  void insert(std::initializer_list<Tp> args) {
+    for(const auto &arg : args) {
+      auto node = std::make_shared<MyList<Tp>>(arg);
+      node->next = this->next;
+      this->next = node;
+    }
+  }
   std::string to_string(){
     MyList<Tp> *tail = this;
     std::string out;
@@ -33,9 +40,26 @@ class MyList{
   std::shared_ptr<MyList<Tp>> next;
 };
 
+class pod{
+  public:
+   int a;
+   int b;
+};
+
 int main(int argc, char *argv[])
 {
+  // array init list
+  int arr[] = {1,2,3,4,5,6};
+  std::cout << "array init list: " << "arr[5]: "<< arr[5] << std::endl;
+
+  // POD init list
+  pod a = {1,2};
+  std::cout << "pod init a.a: " << a.a << ", a.b: " << a.b << std::endl;
+
+  // initializer list
   MyList<int> l = {1,2,3,4,5,6};
-  std::cout << l.to_string() << std::endl;
+  std::cout << "initialize list for constructor: " << l.to_string() << std::endl;
+  l.insert({7,8,9});
+  std::cout << "initialize list for member func: " << l.to_string() << std::endl;
   return 0;
 }
