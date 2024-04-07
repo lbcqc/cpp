@@ -8,6 +8,7 @@ add_executable(stdcpp
 
 # basic
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/basic/string)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/basic/typename)
 # stdcpp98
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/stdcpp98/list)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/stdcpp98/set)
@@ -23,6 +24,8 @@ add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/stdcpp11/initializer_list)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/stdcpp11/rvo)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/stdcpp11/ref)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/stdcpp11/async)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/stdcpp11/decltype)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/stdcpp11/constexpr)
 
 # stdcpp20
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/stdcpp20/strong_ordering)
