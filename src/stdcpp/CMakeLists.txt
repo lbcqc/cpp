@@ -27,6 +27,10 @@ add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/stdcpp11/async)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/stdcpp11/decltype)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/stdcpp11/constexpr)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/stdcpp11/for_range)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/stdcpp11/lrvalue)
+
+# stdcpp17
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/stdcpp17/fold_expressions)
 
 # stdcpp20
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/stdcpp20/strong_ordering)

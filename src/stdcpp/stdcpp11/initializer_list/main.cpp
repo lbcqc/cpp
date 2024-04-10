@@ -46,6 +46,15 @@ class pod{
    int b;
 };
 
+template<typename T, typename... Ts>
+void printf3(T value, Ts... args) {
+  std::cout << value << " ";
+  (void) std::initializer_list<T>{([&args] {
+    std::cout << args << " ";
+  }(), T{})...}; // 必须要有一个T{}未使用的参数触发逗号表达式执行前面的 lambda，否则会报错
+  std::cout << std::endl;
+}
+
 int main(int argc, char *argv[])
 {
   // array init list
@@ -61,5 +70,8 @@ int main(int argc, char *argv[])
   std::cout << "initialize list for constructor: " << l.to_string() << std::endl;
   l.insert({7,8,9});
   std::cout << "initialize list for member func: " << l.to_string() << std::endl;
+
+  // initializer list for function
+  printf3(1,2.0,3.0,4.0,5.0,6.0);
   return 0;
 }
