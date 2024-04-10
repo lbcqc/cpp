@@ -31,6 +31,7 @@ add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/stdcpp11/lrvalue)
 
 # stdcpp17
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/stdcpp17/fold_expressions)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/stdcpp17/structured_binding)
 
 # stdcpp20
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/stdcpp20/strong_ordering)
