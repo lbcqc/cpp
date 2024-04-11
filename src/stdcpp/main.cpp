@@ -4,20 +4,16 @@
 #include <iostream>
 #include <vector>
 #include <unordered_map>
+#include <memory>
+
+auto add(int a, std::unique_ptr<int> b) {
+    return a + *b;
+}
 
 int main(int argc, char *argv[]) {
-  std::vector<char> vec =  {'a', 'v', 'd', 'f', 'd', 'f', 'c', 'a'};
-  std::unordered_map<char, int> count;
-  for (auto v:vec){
-    count[v]++;
-  }
-  int index = 0;
-  for (auto v:vec){
-    if (count[v] == 1) {
-      break;
-    }
-    index++;
-  }
-  std::cout << index << std::endl;
+  int a = 1;
+  std::unique_ptr<int> p =  std::make_unique<int>(1);
+  add(a, std::move(p));
+  a = *p;
   return 0;
 }

@@ -14,5 +14,10 @@ int main(int argc, char *argv[]) {
   for (auto &&[k, v] : m) {
     std::cout << k << " " << v << '\n';
   }
+
+  std::tuple<std::string, int> t = { "a", 1 };
+  auto &&[k, v] = t;
+  std::cout << k << " " << v << '\n';\
+
   return 0;
 }

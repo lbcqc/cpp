@@ -29,6 +29,9 @@ add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/stdcpp11/constexpr)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/stdcpp11/for_range)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/stdcpp11/lrvalue)
 
+#stdcpp14
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/stdcpp14/decltype_auto)
+
 # stdcpp17
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/stdcpp17/fold_expressions)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/stdcpp17/structured_binding)
