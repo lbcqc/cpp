@@ -28,6 +28,7 @@ add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/stdcpp11/decltype)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/stdcpp11/constexpr)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/stdcpp11/for_range)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/stdcpp11/lrvalue)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/stdcpp11/function)
 
 #stdcpp14
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/stdcpp14/decltype_auto)

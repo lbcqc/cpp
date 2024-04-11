@@ -104,5 +104,10 @@ int main(int argc, char *argv[]) {
   testForward(10); // forward &
   testForward(10+ff); // forward &
 
+  // rvalue reference can be modified
+  int &&i = 1;
+  i = i+1;
+  std::cout << i << std::endl;
+
   return 0;
 }
