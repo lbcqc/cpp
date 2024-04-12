@@ -3,9 +3,9 @@
 //
 #include <iostream>
 
-class Poing{
+class Poing {
  public:
-  Poing(int _x, int _y):x(_x), y(_y){}
+  Poing(int _x, int _y) : x(_x), y(_y) {}
   friend constexpr std::strong_ordering operator<=>(const Poing &a, const Poing &b) {
     if (a.x < b.x) {
       return std::strong_ordering::less;
@@ -32,7 +32,7 @@ void print_order(std::strong_ordering order) {
     std::cout << "less" << std::endl;
   } else if (order == std::strong_ordering::equal) {
     std::cout << "less" << std::endl;
-  } else if  (order == std::strong_ordering::equivalent) {
+  } else if (order == std::strong_ordering::equivalent) {
     std::cout << "equivalent" << std::endl;
   } else if (order == std::strong_ordering::greater) {
     std::cout << "equivalent" << std::endl;
@@ -41,8 +41,7 @@ void print_order(std::strong_ordering order) {
   }
 }
 
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
   int a{10};
   std::strong_ordering order{a <=> 1};
   print_order(order);

@@ -26,38 +26,32 @@ void foo3(T &&t) {
   std::cout << "foo3(T &&t): " << typeid(t).name() << std::endl;
 }
 
-template<typename _Tp>
-_GLIBCXX_NODISCARD
-    constexpr _Tp&&
-    forward(typename std::remove_reference<_Tp>::type& __t) noexcept
-{
+template <typename _Tp>
+_GLIBCXX_NODISCARD constexpr _Tp &&forward(typename std::remove_reference<_Tp>::type &__t) noexcept {
   std::cout << "forward &" << std::endl;
-  return static_cast<_Tp&&>(__t);
+  return static_cast<_Tp &&>(__t);
 }
 
-template<typename _Tp>
-_GLIBCXX_NODISCARD
-    constexpr _Tp&&
-    forward(typename std::remove_reference<_Tp>::type&& __t) noexcept
-{
+template <typename _Tp>
+_GLIBCXX_NODISCARD constexpr _Tp &&forward(typename std::remove_reference<_Tp>::type &&__t) noexcept {
   std::cout << "forward &&" << std::endl;
   static_assert(!std::is_lvalue_reference<_Tp>::value,
                 "std::forward must not be used to convert an rvalue to an lvalue");
-  return static_cast<_Tp&&>(__t);
+  return static_cast<_Tp &&>(__t);
 }
 
-template<typename T>
-void print(T & t){
+template <typename T>
+void print(T &t) {
   std::cout << "左值" << std::endl;
 }
 
-template<typename T>
-void print(T && t){
+template <typename T>
+void print(T &&t) {
   std::cout << "右值" << std::endl;
 }
 
-template<typename T>
-void testForward(T && v){
+template <typename T>
+void testForward(T &&v) {
   print(forward<T>(v));
 }
 
@@ -70,7 +64,7 @@ int main(int argc, char *argv[]) {
   // int &&e = b; // error, e is rvalue reference, but b is lvalue
   int &&e = std::move(b);
   int &&f = b + 10;  // ok, f is rvalue reference, b is lvalue, b+10 is rvalue
-  int &g = f; // f is lvalue
+  int &g = f;        // f is lvalue
 
   // foo1
   int aa = 10;
@@ -99,14 +93,14 @@ int main(int argc, char *argv[]) {
   foo3(ff);  // T is int&&
   foo3(40);  // T is int
 
-  testForward(ee); // forward &
-  testForward(ff); // forward &
-  testForward(10); // forward &
-  testForward(10+ff); // forward &
+  testForward(ee);       // forward &
+  testForward(ff);       // forward &
+  testForward(10);       // forward &
+  testForward(10 + ff);  // forward &
 
   // rvalue reference can be modified
   int &&i = 1;
-  i = i+1;
+  i = i + 1;
   std::cout << i << std::endl;
 
   return 0;

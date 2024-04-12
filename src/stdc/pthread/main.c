@@ -7,7 +7,7 @@
 _Thread_local _Alignas(32) int thread_specific_data = 0;
 
 int thread_function(void *arg) {
-  thread_specific_data = *(int *) arg;
+  thread_specific_data = *(int *)arg;
   printf("Thread %ld: thread_specific_data = %d\n", thrd_current(), thread_specific_data);
   return 0;
 }

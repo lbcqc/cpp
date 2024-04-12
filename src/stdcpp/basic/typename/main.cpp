@@ -4,23 +4,23 @@
 
 class A {
  public:
-  class X{};
+  class X {};
   int X;
 };
 
-class B{
+class B {
  public:
-  class X{};
+  class X {};
 };
 
 template <typename T>
-int foo(T t){
+int foo(T t) {
   typename T::X x;
 }
 
 int main(int argc, char** argv) {
   A a;
-  //foo(a);
+  // foo(a);
 
   B b;
   foo(b);

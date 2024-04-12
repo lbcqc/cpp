@@ -28,7 +28,7 @@ class A {
   std::string name;
 };
 
-A GetMyA(std::string &&name) {
+A GetMyA(std::string&& name) {
   A a(name);
   return a;
 }

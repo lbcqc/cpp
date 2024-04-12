@@ -1,9 +1,9 @@
 //
 // Created by root on 3/24/24.
 //
+#include <fmt/ranges.h>
 #include <iostream>
 #include <tuple>
-#include <fmt/ranges.h>
 
 std::tuple<int, double, std::string> get_student(int num) {
   switch (num) {

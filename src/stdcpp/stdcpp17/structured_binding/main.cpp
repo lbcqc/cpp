@@ -6,18 +6,18 @@
 
 int main(int argc, char *argv[]) {
   std::map<std::string, int> m = {
-    { "a", 1 },
-    { "b", 2 },
-    { "c", 3 },
+      {"a", 1},
+      {"b", 2},
+      {"c", 3},
   };
 
   for (auto &&[k, v] : m) {
     std::cout << k << " " << v << '\n';
   }
 
-  std::tuple<std::string, int> t = { "a", 1 };
+  std::tuple<std::string, int> t = {"a", 1};
   auto &&[k, v] = t;
-  std::cout << k << " " << v << '\n';\
+  std::cout << k << " " << v << '\n';
 
   return 0;
 }

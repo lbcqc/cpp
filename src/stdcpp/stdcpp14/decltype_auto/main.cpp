@@ -5,14 +5,12 @@
 
 // run: g++ -std=c++14 -o main main.cpp
 
-template<typename T>
+template <typename T>
 T f();
 
-decltype(auto) f1() {
-  return 1;
-}
+decltype(auto) f1() { return 1; }
 decltype(auto) f2() {
- int a = 0;
+  int a = 0;
   return a;
 }
 decltype(auto) f3() {
@@ -20,9 +18,7 @@ decltype(auto) f3() {
   return (a);
 }
 
-auto g1() {
-  return 1;
-}
+auto g1() { return 1; }
 auto g2() {
   int a = 0;
   return a;
