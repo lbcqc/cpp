@@ -2,8 +2,7 @@ cmake_minimum_required(VERSION 3.19.0)
 project(cpptest)
 
 # 添加子工程
-add_subdirectory(src/demo/fmt)
-add_subdirectory(src/demo/gflags)
+add_subdirectory(src/demo)
 add_subdirectory(src/stdc)
 add_subdirectory(src/stdcpp)
 
