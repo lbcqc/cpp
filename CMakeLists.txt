@@ -5,6 +5,7 @@ project(cpptest)
 add_subdirectory(src/demo)
 add_subdirectory(src/stdc)
 add_subdirectory(src/stdcpp)
+add_subdirectory(src/leetcode)
 
 ############################################################
 # PACK

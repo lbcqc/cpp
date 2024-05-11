@@ -9,9 +9,14 @@
 auto add(int a, std::unique_ptr<int> b) { return a + *b; }
 
 int main(int argc, char *argv[]) {
-  int a = 1;
+  std::vector<bool> test = { false };
+  auto t = test[0];
+  std::cout << typeid(t).name() << std::endl;
+
+  char a_char = 'a';
+  int a = static_cast<int>(a_char);
   std::unique_ptr<int> p = std::make_unique<int>(1);
   add(a, std::move(p));
-  a = *p;
+  //a = *p; // will cause panic
   return 0;
 }

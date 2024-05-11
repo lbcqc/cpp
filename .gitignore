@@ -3,3 +3,8 @@
 /.vscode/
 /cmake-build-debug-gcc11/
 /cmake-build-debug/
+
+# nodejs
+node_modules
+package.json
+package-lock.json
