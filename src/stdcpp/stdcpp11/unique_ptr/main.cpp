@@ -4,10 +4,11 @@
 #include <iostream>
 #include <memory>
 
-struct Foo {
+class Foo : public std::enable_shared_from_this<Foo> {
+  public:
   Foo() { std::cout << "Foo::Foo" << std::endl; }
   ~Foo() { std::cout << "Foo::~Foo" << std::endl; }
-  void foo() { std::cout << "Foo::foo" << std::endl; }
+  void foo() { std::cout << "Foo::foo" << " " << std::endl; }
 };
 
 void f(const Foo &) {
@@ -16,8 +17,16 @@ void f(const Foo &) {
 
 int main() {
   std::unique_ptr<Foo> p1(std::make_unique<Foo>());
+  std::shared_ptr<Foo> haha = std::move(p1);
   // p1 不空, 输出
-  if (p1) p1->foo();
+  if (p1) {
+    std::cout << "p1 ";
+    p1->foo();
+  }
+  if (haha) {
+    std::cout << "haha ";
+    haha->foo();
+  }
   {
     std::unique_ptr<Foo> p2(std::move(p1));
     // p2 不空, 输出
