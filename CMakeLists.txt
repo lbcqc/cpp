@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.19.0)
 project(cpptest)
 
+set(CMAKE_POLICY_VERSION_MINIMUM 3.5)
+
 # 添加子工程
 add_subdirectory(src/demo)
 add_subdirectory(src/stdc)
