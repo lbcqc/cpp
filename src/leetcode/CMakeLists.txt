@@ -7,3 +7,4 @@ add_subdirectory(demo_template)
 
 # array
 add_subdirectory(array/binary_search)
+add_subdirectory(array/remove_duplicates)
