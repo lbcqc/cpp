@@ -3,8 +3,7 @@ project(leetcode CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_subdirectory(demo_template)
+include(${CMAKE_HOME_DIRECTORY}/cmake/spdlog.cmake)
 
-# array
-add_subdirectory(array/binary_search)
-add_subdirectory(array/remove_duplicates)
+add_subdirectory(demo_template)
+add_subdirectory(array)
