@@ -5,5 +5,7 @@ set(CMAKE_CXX_STANDARD 17)
 
 include(${CMAKE_HOME_DIRECTORY}/cmake/spdlog.cmake)
 
-add_subdirectory(demo_template)
-add_subdirectory(array)
+add_executable(leetcode-demo_template ./demo_template/main.cpp)
+add_executable(leetcode-array-binary_search ./array/binary_search.cpp)
+add_executable(leetcode-array-remove_duplicates ./array/remove_duplicates.cpp)
+target_link_libraries(leetcode-array-remove_duplicates PRIVATE spdlog::spdlog)
