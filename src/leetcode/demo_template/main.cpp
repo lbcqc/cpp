@@ -3,7 +3,15 @@
 //
 #include <iostream>
 
+class Solution {
+public:
+  void Do() {
+    std::cout << "hello world" << std::endl;
+  }
+};
+
 int main(int argc, char **argv) {
-  std::cout << "hello world" << std::endl;
+  Solution s;
+  s.Do();
   return 0;
 }
