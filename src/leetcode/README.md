@@ -11,3 +11,4 @@
 - remove_duplicate: [26. 删除有序数组中的重复项](https://leetcode.cn/problems/remove-duplicates-from-sorted-array/)
 - reverse_list: [206. 反转链表](https://leetcode.cn/problems/reverse-linked-list/)
 - k_group_reverse_list: [K 个一组翻转链表](https://leetcode.cn/problems/reverse-nodes-in-k-group/)
+- find_neighbor_value: [邻值查找](https://www.acwing.com/problem/content/description/138/)
