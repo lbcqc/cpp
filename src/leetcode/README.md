@@ -13,3 +13,4 @@
 - k_group_reverse_list: [K 个一组翻转链表](https://leetcode.cn/problems/reverse-nodes-in-k-group/)
 - find_neighbor_value: [邻值查找](https://www.acwing.com/problem/content/description/138/)
 - linked-list-cycle：[141. 环形链表](https://leetcode.cn/problems/linked-list-cycle/description/)
+- linked-list-cycle-ii: [142. 环形链表 II](https://leetcode.cn/problems/linked-list-cycle-ii/description/)

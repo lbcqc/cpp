@@ -76,6 +76,6 @@ int main(int argc, char **argv) {
 
   // create cycle
   node4.next = &node2;
-  std::cout << s.hasCycle(&head) << std::endl;s.hasCycle(&head); // expect true
+  std::cout << s.hasCycle(&head) << std::endl; // expect true
   return 0;
 }
