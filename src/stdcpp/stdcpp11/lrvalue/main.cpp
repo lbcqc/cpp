@@ -65,6 +65,7 @@ int main(int argc, char *argv[]) {
   int &&e = std::move(b);
   int &&f = b + 10;  // ok, f is rvalue reference, b is lvalue, b+10 is rvalue
   int &g = f;        // f is lvalue
+  std::cout << g << std::endl;
 
   // foo1
   int aa = 10;

@@ -16,7 +16,7 @@ void f(const Foo &) {
 }
 
 int main() {
-  std::unique_ptr<Foo> p1(std::make_unique<Foo>());
+  std::unique_ptr<Foo> p1 = std::make_unique<Foo>();
   std::shared_ptr<Foo> haha = std::move(p1);
   // p1 不空, 输出
   if (p1) {

@@ -6,10 +6,11 @@
 int main(int argc, char *argv[]) {
   int a = 1;
   int b = 2;
-  std::function<int(int, int)> f = [](int a, int b) -> int { return a + b; };
+  std::function<int(int, int)> f = [](int a, int b) { return a + b; };
   auto f2 = std::bind(f, std::ref(a), std::placeholders::_1);  // bind a by reference
   a = f(a, b);
   std::cout << "f(a,b) = " << a << std::endl;
+  std::cout << "f(1,2) = " << f(3,10) << std::endl;
   std::cout << "f2(b) = " << f2(b) << std::endl;
   return 0;
 }

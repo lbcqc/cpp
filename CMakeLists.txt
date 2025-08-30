@@ -6,7 +6,7 @@ set(CMAKE_POLICY_VERSION_MINIMUM 3.5)
 # 添加子工程
 #add_subdirectory(src/demo)
 #add_subdirectory(src/stdc)
-#add_subdirectory(src/stdcpp)
+add_subdirectory(src/stdcpp)
 add_subdirectory(src/leetcode)
 
 #############################################################
