@@ -10,6 +10,7 @@ struct ListNode {
     ListNode(int x, ListNode *next) : val(x), next(next) {}
 };
 
+// 迭代
 class Solution {
 public:
   ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
@@ -39,5 +40,24 @@ public:
     // 合并之后最多还有一个链表未被遍历完，直接追加即可
     list->next = list1 == nullptr? list2:list1;
     return dummy.next;
+  }
+};
+
+// 递归
+class Solution {
+public:
+  ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
+    if (list1 == nullptr) {
+      return list2;
+    }
+    if (list2 == nullptr) {
+      return list1;
+    }
+    if (list1->val <= list2->val) {
+      list1->next = this->mergeTwoLists(list1->next, list2);
+      return list1;
+    }
+    list2->next = this->mergeTwoLists(list1, list2->next);
+    return list2;
   }
 };
