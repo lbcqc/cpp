@@ -19,3 +19,5 @@ add_executable(leetcode-list-find_neighbor_value ./list/find_neighbor_value.cpp)
 add_executable(leetcode-list-linked_list_cycle ./list/linked_list_cycle.cpp)
 add_executable(leetcode-list-linked_list_cycle_ii ./list/linked_list_cycle_ii.cpp)
 add_executable(leetcode-list-merge_two_list ./list/merge_two_list.cpp)
+
+add_executable(leetcode-stack-valid_bracket ./stack/valid_bracket.cpp)

@@ -18,3 +18,5 @@
   - linked-list-cycle：[141. 环形链表](https://leetcode.cn/problems/linked-list-cycle/description/)
   - linked-list-cycle-ii: [142. 环形链表 II](https://leetcode.cn/problems/linked-list-cycle-ii/description/)
   - merge_two_list: [21. 合并两个有序链表](https://leetcode.cn/problems/merge-two-sorted-lists/)
+- stack
+  - valid_bracket：[20. 有效的括号](https://leetcode.cn/problems/valid-parentheses/description/)
