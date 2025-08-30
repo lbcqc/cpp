@@ -7,11 +7,14 @@
 
 ## 题目
 
-- binary_search：[704. 二分查找](https://leetcode.cn/problems/binary-search/description/)
-- remove_duplicate: [26. 删除有序数组中的重复项](https://leetcode.cn/problems/remove-duplicates-from-sorted-array/)
-- reverse_list: [206. 反转链表](https://leetcode.cn/problems/reverse-linked-list/)
-- k_group_reverse_list: [K 个一组翻转链表](https://leetcode.cn/problems/reverse-nodes-in-k-group/)
-- find_neighbor_value: [邻值查找](https://www.acwing.com/problem/content/description/138/)
-- linked-list-cycle：[141. 环形链表](https://leetcode.cn/problems/linked-list-cycle/description/)
-- linked-list-cycle-ii: [142. 环形链表 II](https://leetcode.cn/problems/linked-list-cycle-ii/description/)
-- merge_two_list: [21. 合并两个有序链表](https://leetcode.cn/problems/merge-two-sorted-lists/)
+- array
+  - binary_search：[704. 二分查找](https://leetcode.cn/problems/binary-search/description/)
+  - remove_duplicate: [26. 删除有序数组中的重复项](https://leetcode.cn/problems/remove-duplicates-from-sorted-array/)
+  - plus_one: [66. 加一](https://leetcode.cn/problems/plus-one/description/)
+- list
+  - reverse_list: [206. 反转链表](https://leetcode.cn/problems/reverse-linked-list/)
+  - k_group_reverse_list: [K 个一组翻转链表](https://leetcode.cn/problems/reverse-nodes-in-k-group/)
+  - find_neighbor_value: [邻值查找](https://www.acwing.com/problem/content/description/138/)
+  - linked-list-cycle：[141. 环形链表](https://leetcode.cn/problems/linked-list-cycle/description/)
+  - linked-list-cycle-ii: [142. 环形链表 II](https://leetcode.cn/problems/linked-list-cycle-ii/description/)
+  - merge_two_list: [21. 合并两个有序链表](https://leetcode.cn/problems/merge-two-sorted-lists/)
