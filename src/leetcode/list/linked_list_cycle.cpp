@@ -1,8 +1,9 @@
 //
 // Created by root on 2025/8/30.
 //
-#include <iostream>
 #include <climits>
+#include <iostream>
+#include <unordered_set>
 
 // TIPS:
 // 链表中节点的数目范围是 [0, 104]
@@ -16,14 +17,47 @@ struct ListNode {
     ListNode(int x, ListNode* _next): val(x), next(_next) {}
 };
 
+// 标记法
+// class Solution {
+//  public:
+//   bool hasCycle(ListNode *head) {
+//     while (head) {
+//       if (head->val == INT32_MAX) {
+//         return true;
+//       }
+//       head->val = INT32_MAX;
+//       head = head->next;
+//     }
+//     return false;
+//   }
+// };
+
+// 快慢指针法
+// class Solution {
+// public:
+//   bool hasCycle(ListNode *head) {
+//     ListNode *fast = head, *slow = head;
+//     while (fast != nullptr && fast->next != nullptr) {
+//       fast = fast->next->next;
+//       slow = slow->next;
+//       if (fast == slow) {
+//         return true;
+//       }
+//     }
+//     return false;
+//   }
+// };
+
+// hash 记录法
 class Solution {
- public:
+public:
   bool hasCycle(ListNode *head) {
-    while (head) {
-      if (head->val == INT32_MAX) {
+    std::unordered_set<ListNode*> seen;
+    while (head!=nullptr) {
+      if (seen.count(head)) {
         return true;
       }
-      head->val = INT32_MAX;
+      seen.insert(head);
       head = head->next;
     }
     return false;
