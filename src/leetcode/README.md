@@ -20,3 +20,4 @@
   - merge_two_list: [21. 合并两个有序链表](https://leetcode.cn/problems/merge-two-sorted-lists/)
 - stack
   - valid_bracket：[20. 有效的括号](https://leetcode.cn/problems/valid-parentheses/description/)
+  - min_stack：[155. 最小栈](https://leetcode.cn/problems/min-stack/description/)
