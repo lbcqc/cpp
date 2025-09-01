@@ -22,3 +22,4 @@ add_executable(leetcode-list-merge_two_list ./list/merge_two_list.cpp)
 
 add_executable(leetcode-stack-valid_bracket ./stack/valid_bracket.cpp)
 add_executable(leetcode-stack-min_stack ./stack/min_stack.cpp)
+add_executable(leetcode-stack-reverse_polish_notation ./stack/reverse_polish_notation.cpp)

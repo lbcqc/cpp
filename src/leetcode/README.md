@@ -21,3 +21,4 @@
 - stack
   - valid_bracket：[20. 有效的括号](https://leetcode.cn/problems/valid-parentheses/description/)
   - min_stack：[155. 最小栈](https://leetcode.cn/problems/min-stack/description/)
+  - reverse_polish_notation：[150. 逆波兰表达式求值](https://leetcode.cn/problems/evaluate-reverse-polish-notation/)
