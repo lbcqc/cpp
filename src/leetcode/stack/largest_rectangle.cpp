@@ -1,5 +1,5 @@
 //
-// Created by root on 5/9/24.
+// Created by root on 2025/9/6.
 //
 // 最大矩形 https://leetcode.cn/problems/maximal-rectangle/description/
 // 题解：这道题非常难！它需要先给每一行统计其累计宽度，然后基于每一列去计算最大柱状图面积

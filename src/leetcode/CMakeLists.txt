@@ -37,6 +37,7 @@ add_executable(leetcode-stack-valid_bracket ./stack/valid_bracket.cpp)
 add_executable(leetcode-stack-min_stack ./stack/min_stack.cpp)
 add_executable(leetcode-stack-reverse_polish_notation ./stack/reverse_polish_notation.cpp)
 add_executable(leetcode-stack-largest_rectangle_area ./stack/largest_rectangle_area.cpp)
+add_executable(leetcode-stack-largest_rectangle ./stack/largest_rectangle.cpp)
 
 # recursion
 add_executable(leetcode-recusion-calculate stack/calculate.cpp)

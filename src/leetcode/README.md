@@ -29,5 +29,7 @@
   - valid_bracket：[20. 有效的括号](https://leetcode.cn/problems/valid-parentheses/description/)
   - min_stack：[155. 最小栈](https://leetcode.cn/problems/min-stack/description/)
   - reverse_polish_notation：[150. 逆波兰表达式求值](https://leetcode.cn/problems/evaluate-reverse-polish-notation/)
+  - largest_rectangle_area：[84. 柱状图中最大的矩形](https://leetcode.cn/problems/largest-rectangle-in-histogram/description/)
+  - largest_rectangle：[85. 最大矩形](https://leetcode.cn/problems/maximal-rectangle/description/)
 - recursion
   - calculate: [224. 基本计算器](https://leetcode.cn/problems/basic-calculator/)
