@@ -11,6 +11,8 @@
   - binary_search：[704. 二分查找](https://leetcode.cn/problems/binary-search/description/)
   - remove_duplicate: [26. 删除有序数组中的重复项](https://leetcode.cn/problems/remove-duplicates-from-sorted-array/)
   - plus_one: [66. 加一](https://leetcode.cn/problems/plus-one/description/)
+- heap:
+  - max_sliding_windows: [239. 滑动窗口最大值](https://leetcode.cn/problems/sliding-window-maximum/description/)
 - list
   - reverse_list: [206. 反转链表](https://leetcode.cn/problems/reverse-linked-list/)
   - k_group_reverse_list: [K 个一组翻转链表](https://leetcode.cn/problems/reverse-nodes-in-k-group/)
@@ -18,6 +20,8 @@
   - linked-list-cycle：[141. 环形链表](https://leetcode.cn/problems/linked-list-cycle/description/)
   - linked-list-cycle-ii: [142. 环形链表 II](https://leetcode.cn/problems/linked-list-cycle-ii/description/)
   - merge_two_list: [21. 合并两个有序链表](https://leetcode.cn/problems/merge-two-sorted-lists/)
+- queue
+  - max_sliding_windows: [239. 滑动窗口最大值](https://leetcode.cn/problems/sliding-window-maximum/description/)
 - stack
   - valid_bracket：[20. 有效的括号](https://leetcode.cn/problems/valid-parentheses/description/)
   - min_stack：[155. 最小栈](https://leetcode.cn/problems/min-stack/description/)

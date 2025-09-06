@@ -14,6 +14,9 @@ target_link_libraries(leetcode-array-remove_duplicates PRIVATE spdlog::spdlog)
 add_executable(leetcode-array-variable_array ./array/variable_array.cpp)
 add_executable(leetcode-array-plus_one ./array/plus_one.cpp)
 
+# heap
+add_executable(leetcode-heap-max_sliding_windwos ./heap/max_sliding_windwos.cpp)
+
 # list
 add_executable(leetcode-list-reverse_list ./list/reverse_list.cpp)
 add_executable(leetcode-list-k_group_reverse_list ./list/k_group_reverse_list.cpp)
@@ -21,6 +24,9 @@ add_executable(leetcode-list-find_neighbor_value ./list/find_neighbor_value.cpp)
 add_executable(leetcode-list-linked_list_cycle ./list/linked_list_cycle.cpp)
 add_executable(leetcode-list-linked_list_cycle_ii ./list/linked_list_cycle_ii.cpp)
 add_executable(leetcode-list-merge_two_list ./list/merge_two_list.cpp)
+
+# queue
+add_executable(leetcode-queue-max_sliding_windwos ./queue/max_sliding_windows.cpp)
 
 # stack
 add_executable(leetcode-stack-valid_bracket ./stack/valid_bracket.cpp)
