@@ -1,6 +1,12 @@
 //
-// Created by root on 5/9/24.
+// Created by root on 2025/9/6.
 //
+// 84. 柱状图中最大的矩形 https://leetcode.cn/problems/largest-rectangle-in-histogram/description/
+// 题解：这道题的思路是确定某个柱高其最大的宽，宽*高即为面积，遍历所有柱高的面积计算最大面积；其宽=(left,right]的宽度；
+// right 位置为遇到的第一个比其小的位置-1；left为上一个比它小的位置；使用栈来辅助记录，当栈顶为空/栈顶比当前值小时，栈顶
+// 即当前值的 left，但是当前值的 right 还未知，当前值的 right 一定在未来才能确定，所以比入栈；当遇到栈顶不为空且其值比当前值
+// 小时，当前值即栈顶的 right，此时将当前值出栈，然后新栈顶的位置为旧栈顶left，计算面积即可。注意当遍历完全部数后，栈不为空，则栈
+// 中所有元素的 right = size() - 1；
 #include <iostream>
 #include <stack>
 #include <vector>
