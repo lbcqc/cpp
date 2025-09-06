@@ -24,6 +24,7 @@
   - trap：[42. 接雨水](https://leetcode.cn/problems/trapping-rain-water/solutions/692342/jie-yu-shui-by-leetcode-solution-tuvc/)
 - queue
   - max_sliding_windows: [239. 滑动窗口最大值](https://leetcode.cn/problems/sliding-window-maximum/description/)
+  - double_queue: [641. 设计循环双端队列](https://leetcode.cn/problems/design-circular-deque/solutions/1743694/she-ji-xun-huan-shuang-duan-dui-lie-by-l-97v0/)
 - stack
   - valid_bracket：[20. 有效的括号](https://leetcode.cn/problems/valid-parentheses/description/)
   - min_stack：[155. 最小栈](https://leetcode.cn/problems/min-stack/description/)

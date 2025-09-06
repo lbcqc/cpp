@@ -30,6 +30,7 @@ add_executable(leetcode-point-trap point/trap.cpp)
 
 # queue
 add_executable(leetcode-queue-max_sliding_windwos ./queue/max_sliding_windows.cpp)
+add_executable(leetcode-queue-double_queue ./queue/double_queue.cpp)
 
 # stack
 add_executable(leetcode-stack-valid_bracket ./stack/valid_bracket.cpp)
