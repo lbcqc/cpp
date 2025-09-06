@@ -20,6 +20,8 @@
   - linked-list-cycle：[141. 环形链表](https://leetcode.cn/problems/linked-list-cycle/description/)
   - linked-list-cycle-ii: [142. 环形链表 II](https://leetcode.cn/problems/linked-list-cycle-ii/description/)
   - merge_two_list: [21. 合并两个有序链表](https://leetcode.cn/problems/merge-two-sorted-lists/)
+- point
+  - trap：[42. 接雨水](https://leetcode.cn/problems/trapping-rain-water/solutions/692342/jie-yu-shui-by-leetcode-solution-tuvc/)
 - queue
   - max_sliding_windows: [239. 滑动窗口最大值](https://leetcode.cn/problems/sliding-window-maximum/description/)
 - stack

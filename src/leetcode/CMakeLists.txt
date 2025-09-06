@@ -25,6 +25,9 @@ add_executable(leetcode-list-linked_list_cycle ./list/linked_list_cycle.cpp)
 add_executable(leetcode-list-linked_list_cycle_ii ./list/linked_list_cycle_ii.cpp)
 add_executable(leetcode-list-merge_two_list ./list/merge_two_list.cpp)
 
+# point
+add_executable(leetcode-point-trap point/trap.cpp)
+
 # queue
 add_executable(leetcode-queue-max_sliding_windwos ./queue/max_sliding_windows.cpp)
 
