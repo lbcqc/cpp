@@ -28,6 +28,10 @@ add_executable(leetcode-list-merge_two_list ./list/merge_two_list.cpp)
 # point
 add_executable(leetcode-point-trap point/trap.cpp)
 
+# prefixsum
+add_executable(leetcode-prefixsum-number_of_subarrays ./prefixsum/number_of_subarrays.cpp)
+add_executable(leetcode-prefixsum-max_sub_array ./prefixsum/max_sub_array.cpp)
+
 # queue
 add_executable(leetcode-queue-max_sliding_windwos ./queue/max_sliding_windows.cpp)
 add_executable(leetcode-queue-double_queue ./queue/double_queue.cpp)

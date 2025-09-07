@@ -22,6 +22,9 @@
   - merge_two_list: [21. 合并两个有序链表](https://leetcode.cn/problems/merge-two-sorted-lists/)
 - point
   - trap：[42. 接雨水](https://leetcode.cn/problems/trapping-rain-water/solutions/692342/jie-yu-shui-by-leetcode-solution-tuvc/)
+- prefixsum:
+  - max_sub_array：[53. 最大子数组和](https://leetcode.cn/problems/maximum-subarray/)
+  - number_of_subarrays: [1248. 统计「优美子数组」](https://leetcode.cn/problems/count-number-of-nice-subarrays/)
 - queue
   - max_sliding_windows: [239. 滑动窗口最大值](https://leetcode.cn/problems/sliding-window-maximum/description/)
   - double_queue: [641. 设计循环双端队列](https://leetcode.cn/problems/design-circular-deque/solutions/1743694/she-ji-xun-huan-shuang-duan-dui-lie-by-l-97v0/)
