@@ -8,6 +8,7 @@
 // 技巧2：ans 要使用最小数字开始
 #include <vector>
 #include <climits>
+#include <algorithm>
 using namespace std;
 
 class Solution {
@@ -19,8 +20,8 @@ class Solution {
     int ans = INT_MIN;
     for (int i = 1; i <= n; i++) {
       s[i] = s[i - 1] + nums[i - 1];
-      ans = ans > s[i] - min ? ans : s[i] - min;
-      min = min < s[i] ? min : s[i];
+      ans = std::max(ans, s[i] - min);
+      min = std::min(min, s[i]);
     }
     return ans;
   }
