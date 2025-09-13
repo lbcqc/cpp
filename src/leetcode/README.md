@@ -36,6 +36,7 @@
 - recursion
   - subsets: [78. 子集](https://leetcode.cn/problems/subsets/description/)
   - combinatiosn: [77. 组合 ](https://leetcode.cn/problems/combinations/)
+  - premute: [全排列](https://leetcode.cn/problems/permutations/description/)
 - stack
   - valid_bracket：[20. 有效的括号](https://leetcode.cn/problems/valid-parentheses/description/)
   - min_stack：[155. 最小栈](https://leetcode.cn/problems/min-stack/description/)
