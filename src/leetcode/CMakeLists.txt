@@ -30,6 +30,7 @@ add_executable(leetcode-point-trap point/trap.cpp)
 add_executable(leetcode-point-two_sum point/two_sum.cpp)
 add_executable(leetcode-point-two_sum_ii point/two_sum_ii.cpp)
 add_executable(leetcode-point-three_sum point/three_sum.cpp)
+add_executable(leetcode-point-max_area point/max_area.cpp)
 
 # prefixsum-diff
 add_executable(leetcode-prefixsum-diff-number_of_subarrays ./prefixsum-diff/number_of_subarrays.cpp)

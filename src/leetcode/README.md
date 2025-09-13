@@ -25,7 +25,7 @@
   - two_sum: [1. 两数之和](https://leetcode.cn/problems/two-sum/description/)
   - two_sum_ii: [167. 两数之和 II - 输入有序数组](https://leetcode.cn/problems/two-sum-ii-input-array-is-sorted/)
   - three_sum：[15. 三数之和](https://leetcode.cn/problems/3sum/description/)
-  - container_with_most_water: [11. 盛最多水的容器](https://leetcode.cn/problems/container-with-most-water/description/)
+  - max_area: [11. 盛最多水的容器](https://leetcode.cn/problems/container-with-most-water/description/)
 - prefixsum:
   - max_sub_array：[53. 最大子数组和](https://leetcode.cn/problems/maximum-subarray/)
   - number_of_subarrays: [1248. 统计「优美子数组」](https://leetcode.cn/problems/count-number-of-nice-subarrays/)
