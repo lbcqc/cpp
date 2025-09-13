@@ -42,6 +42,9 @@ add_executable(leetcode-prefixsum-diff-corp_fligh_bookings ./prefixsum-diff/corp
 add_executable(leetcode-queue-max_sliding_windwos ./queue/max_sliding_windows.cpp)
 add_executable(leetcode-queue-double_queue ./queue/double_queue.cpp)
 
+# recursion
+add_executable(leetcode-recursion-subsets ./recursion/subsets.cpp)
+
 # stack
 add_executable(leetcode-stack-valid_bracket ./stack/valid_bracket.cpp)
 add_executable(leetcode-stack-min_stack ./stack/min_stack.cpp)
