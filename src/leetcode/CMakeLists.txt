@@ -27,6 +27,7 @@ add_executable(leetcode-list-merge_two_list ./list/merge_two_list.cpp)
 
 # point
 add_executable(leetcode-point-trap point/trap.cpp)
+add_executable(leetcode-point-two_sum point/two_sum.cpp)
 
 # prefixsum-diff
 add_executable(leetcode-prefixsum-diff-number_of_subarrays ./prefixsum-diff/number_of_subarrays.cpp)
