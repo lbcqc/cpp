@@ -44,6 +44,7 @@ add_executable(leetcode-queue-double_queue ./queue/double_queue.cpp)
 
 # recursion
 add_executable(leetcode-recursion-subsets ./recursion/subsets.cpp)
+add_executable(leetcode-recursion-combinations ./recursion/combinations.cpp)
 
 # stack
 add_executable(leetcode-stack-valid_bracket ./stack/valid_bracket.cpp)
