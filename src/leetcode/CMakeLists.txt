@@ -57,6 +57,7 @@ add_executable(leetcode-stack-largest_rectangle ./stack/largest_rectangle.cpp)
 # tree
 add_executable(leetcode-tree-invert_tree ./tree/invert_tree.cpp)
 add_executable(leetcode-tree-check_bst ./tree/check_bst.cpp)
+add_executable(leetcode-tree-min_depth ./tree/min_depth.cpp)
 
 # recursion
 add_executable(leetcode-recusion-calculate stack/calculate.cpp)
