@@ -33,7 +33,7 @@
 - queue：单调队列，先进先出
   - max_sliding_windows: [239. 滑动窗口最大值](https://leetcode.cn/problems/sliding-window-maximum/description/)
   - double_queue: [641. 设计循环双端队列](https://leetcode.cn/problems/design-circular-deque/solutions/1743694/she-ji-xun-huan-shuang-duan-dui-lie-by-l-97v0/)
-- recursion：常用于子集、排列、组合、回溯等问题
+- recursion：常用于子集、排列、组合、回溯等问题；递归关键在于边界条件->剪枝->逻辑处理->遍历子问题
   - subsets: [78. 子集](https://leetcode.cn/problems/subsets/description/)
   - combinatiosn: [77. 组合 ](https://leetcode.cn/problems/combinations/)
   - premute: [全排列](https://leetcode.cn/problems/permutations/description/)
@@ -44,3 +44,6 @@
   - reverse_polish_notation：[150. 逆波兰表达式求值](https://leetcode.cn/problems/evaluate-reverse-polish-notation/)
   - largest_rectangle_area：[84. 柱状图中最大的矩形](https://leetcode.cn/problems/largest-rectangle-in-histogram/description/)
   - largest_rectangle：[85. 最大矩形](https://leetcode.cn/problems/maximal-rectangle/description/)
+- tree：树的遍历回溯，常用到递归的方式
+  - invert_tree: [226. 翻转二叉树](https://leetcode.cn/problems/invert-binary-tree/description/)
+  - check_bst: [98. 验证二叉搜索树](https://leetcode.cn/problems/validate-binary-search-tree/description/)

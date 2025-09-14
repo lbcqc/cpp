@@ -54,5 +54,9 @@ add_executable(leetcode-stack-reverse_polish_notation ./stack/reverse_polish_not
 add_executable(leetcode-stack-largest_rectangle_area ./stack/largest_rectangle_area.cpp)
 add_executable(leetcode-stack-largest_rectangle ./stack/largest_rectangle.cpp)
 
+# tree
+add_executable(leetcode-tree-invert_tree ./tree/invert_tree.cpp)
+add_executable(leetcode-tree-check_bst ./tree/check_bst.cpp)
+
 # recursion
 add_executable(leetcode-recusion-calculate stack/calculate.cpp)
