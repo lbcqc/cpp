@@ -61,3 +61,6 @@ add_executable(leetcode-tree-min_depth ./tree/min_depth.cpp)
 
 # recursion
 add_executable(leetcode-recusion-calculate stack/calculate.cpp)
+
+# dp
+add_executable(leetcode-dp-climbing_stairs dp/climbing_stairs.cpp)

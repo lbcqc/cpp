@@ -2,7 +2,7 @@
 // Created by root on 2025/9/14.
 //
 // 111. 二叉树的最小深度 https://leetcode.cn/problems/minimum-depth-of-binary-tree/description/
-// 题解：递归查找，特别关注需要区分处理有两个子树和只
+// 题解：递归查找，特别关注需要区分处理有两个子树和只有一个子树的情况
 #include <algorithm>
 #include <ios>
 using namespace std;
