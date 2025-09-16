@@ -64,3 +64,4 @@ add_executable(leetcode-recusion-calculate stack/calculate.cpp)
 
 # dp
 add_executable(leetcode-dp-climbing_stairs dp/climbing_stairs.cpp)
+add_executable(leetcode-dp-min_cost_climbing_stairs dp/min_cost_climbing_stairs.cpp)

@@ -48,6 +48,7 @@
   - invert_tree: [226. 翻转二叉树](https://leetcode.cn/problems/invert-binary-tree/description/)
   - check_bst: [98. 验证二叉搜索树](https://leetcode.cn/problems/validate-binary-search-tree/description/)
 - dp：常用于多个重叠子问题可推导出主问题的最优解
-  - climbing_stairs: [746. 使用最小花费爬楼梯](https://leetcode.cn/problems/min-cost-climbing-stairs/description/)
+  - climbing_stairs: [70. 爬楼梯](https://leetcode.cn/problems/climbing-stairs/)
+  - min_cost_climbing_stairs: [746. 使用最小花费爬楼梯](https://leetcode.cn/problems/min-cost-climbing-stairs/description/)
 - 贪心：遍历局部最优解汇总之后就是全局最优解
   - 
