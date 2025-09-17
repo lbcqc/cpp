@@ -52,5 +52,6 @@
   - min_cost_climbing_stairs: [746. 使用最小花费爬楼梯](https://leetcode.cn/problems/min-cost-climbing-stairs/description/)
   - climbing_stairs_ii：[57. 爬楼梯（第八期模拟笔试）](https://kamacoder.com/problempage.php?pid=1067)
   - bag01: [46. 携带研究材料（第六期模拟笔试）- 01背包问题](https://kamacoder.com/problempage.php?pid=1046)
+  - bagfull: [52. 携带研究材料（第七期模拟笔试）- 完全背包](https://kamacoder.com/problempage.php?pid=1052)
 - 贪心：遍历局部最优解汇总之后就是全局最优解
   - 
