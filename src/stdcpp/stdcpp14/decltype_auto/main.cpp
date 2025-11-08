@@ -29,12 +29,12 @@ auto g3() {
 }
 
 int main(int argc, char** argv) {
-  f<decltype(f1())>();
-  f<decltype(f2())>();
-  f<decltype(f3())>();
+  // f<decltype(f1())>();
+  // f<decltype(f2())>();
+  // f<decltype(f3())>();
 
-  f<decltype(g1())>();
-  f<decltype(g2())>();
-  f<decltype(g3())>();
+  // f<decltype(g1())>();
+  // f<decltype(g2())>();
+  // f<decltype(g3())>();
   return 0;
 }
