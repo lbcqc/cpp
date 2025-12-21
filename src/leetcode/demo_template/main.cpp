@@ -7,7 +7,9 @@
 #include <string>
 #include <tuple>
 #include <vector>
-#include "fmt/ranges.h"
+
+#include "spdlog/fmt/ranges.h"
+#include "spdlog/spdlog.h"
 
 int main() {
   std::vector<int> nums = {2, 2, 2};
@@ -32,6 +34,6 @@ int main() {
     //   m[nums[i]] = std::vector<int>(i);
     // }
   }
-  fmt::print("ans: {}", ans);
+  spdlog::info("ans: {}", ans);
   return 0;
 }
