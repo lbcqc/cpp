@@ -1,17 +1,15 @@
 #include <algorithm>
 #include <functional>
 #include <iostream>
+#include <list>
+#include <map>
 #include <queue>
 #include <string>
 #include <tuple>
 #include <vector>
-#include <list>
-#include <map>
 #include "fmt/ranges.h"
 
-
-int main()
-{
+int main() {
   std::vector<int> nums = {2, 2, 2};
   int target = 4;
   std::map<int, std::vector<int>> m;
@@ -21,7 +19,7 @@ int main()
     int match_value = target - nums[i];
     if (m.find(match_value) != m.end()) {
       auto match_indexs = m[match_value];
-      for (auto match_index: match_indexs) {
+      for (auto match_index : match_indexs) {
         std::vector<int> tmp = {match_index, i};
         ans.push_back(tmp);
       }

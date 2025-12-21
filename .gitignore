@@ -3,8 +3,6 @@
 /.vscode/
 /.cache/
 /build/
-/cmake-build-debug-gcc11-coverage/
-/cmake-build-debug-gcc11/
 /cmake-build-debug-*
 /cmake-build-debug/
 
