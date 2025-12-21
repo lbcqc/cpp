@@ -225,15 +225,15 @@ class MyCircularDeque {
   int head;
   int tail;
   int cap;
-public:
-  MyCircularDeque(int k):vec(k+1),cap(k+1),head(0), tail(0) {
-  }
+
+ public:
+  MyCircularDeque(int k) : vec(k + 1), cap(k + 1), head(0), tail(0) {}
 
   bool insertFront(int value) {
     if (isFull()) {
       return false;
     }
-    head = (head+1+cap) % cap;
+    head = (head + 1 + cap) % cap;
     vec[head] = value;
     return true;
   }
@@ -243,7 +243,7 @@ public:
       return false;
     }
     vec[tail] = value;
-    tail = (tail-1+cap) % cap;
+    tail = (tail - 1 + cap) % cap;
     return true;
   }
 
@@ -251,7 +251,7 @@ public:
     if (isEmpty()) {
       return false;
     }
-    head = (head-1+cap) % cap;
+    head = (head - 1 + cap) % cap;
     return true;
   }
 
@@ -259,7 +259,7 @@ public:
     if (isEmpty()) {
       return false;
     }
-    tail = (tail+1+cap) % cap;
+    tail = (tail + 1 + cap) % cap;
     return true;
   }
 
@@ -274,19 +274,19 @@ public:
     if (isEmpty()) {
       return -1;
     }
-    int tmp = (tail + 1+cap)%cap;
+    int tmp = (tail + 1 + cap) % cap;
     return vec[tmp];
   }
 
   bool isEmpty() {
-    if (head==tail) {
+    if (head == tail) {
       return true;
     }
     return false;
   }
 
   bool isFull() {
-    int tmp = (head + 1+ cap) % cap;
+    int tmp = (head + 1 + cap) % cap;
     if (tmp == tail) {
       return true;
     }

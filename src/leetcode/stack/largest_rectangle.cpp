@@ -7,7 +7,7 @@
 #include <vector>
 using namespace std;
 class Solution {
-public:
+ public:
   int maximalRectangle(vector<vector<char>>& matrix) {
     if (matrix.size() == 0 || matrix[0].size() == 0) {
       return 0;
@@ -17,26 +17,26 @@ public:
     for (int i = 0; i < matrix.size(); i++) {
       for (int j = 0; j < matrix[i].size(); j++) {
         if (matrix[i][j] == '1') {
-          heights[i][j] = j==0? 1:heights[i][j-1]+1;
+          heights[i][j] = j == 0 ? 1 : heights[i][j - 1] + 1;
         }
       }
     }
     for (int j = 0; j < matrix[0].size(); j++) {
       stack<int> stk;
-      for (int i = 0; i< matrix.size(); i++) {
+      for (int i = 0; i < matrix.size(); i++) {
         while (!stk.empty() && heights[stk.top()][j] > heights[i][j]) {
           int height = heights[stk.top()][j];
           stk.pop();
-          int width = stk.empty()? i:i-stk.top()-1;
-          ans = ans > height*width? ans:height*width;
+          int width = stk.empty() ? i : i - stk.top() - 1;
+          ans = ans > height * width ? ans : height * width;
         }
         stk.push(i);
       }
       while (!stk.empty()) {
         int height = heights[stk.top()][j];
         stk.pop();
-        int width = stk.empty()? matrix.size():matrix.size()-stk.top()-1;
-        ans = ans > height*width? ans:height*width;
+        int width = stk.empty() ? matrix.size() : matrix.size() - stk.top() - 1;
+        ans = ans > height * width ? ans : height * width;
       }
     }
     return ans;

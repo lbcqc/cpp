@@ -1,13 +1,13 @@
 //
 // Created by root on 24-4-16.
 //
+#include <errno.h>
 #include <inttypes.h>
 #include <stdbool.h>
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <errno.h>
 
 typedef struct {
   int x;

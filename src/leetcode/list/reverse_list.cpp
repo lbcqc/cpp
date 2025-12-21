@@ -8,24 +8,21 @@
 #include <utility>
 
 class ListNode {
-public:
+ public:
   int val{};
   std::shared_ptr<ListNode> next;
-  ListNode()= default;
-  explicit ListNode(const int _val): val(_val), next(nullptr) {};
-  ListNode(const int _val, std::shared_ptr<ListNode> _next): val(_val), next(_next){}
+  ListNode() = default;
+  explicit ListNode(const int _val) : val(_val), next(nullptr){};
+  ListNode(const int _val, std::shared_ptr<ListNode> _next) : val(_val), next(_next) {}
 };
 
 class List {
-public:
+ public:
   std::shared_ptr<ListNode> head;
-  List() {
-    head = std::make_unique<ListNode>();
-  }
-  List(std::shared_ptr<ListNode> next) {
-    head = std::make_unique<ListNode>(0, next);
-  }
-public:
+  List() { head = std::make_unique<ListNode>(); }
+  List(std::shared_ptr<ListNode> next) { head = std::make_unique<ListNode>(0, next); }
+
+ public:
   void Reverse() {
     std::stack<std::shared_ptr<ListNode>> stack;
     auto last = head;
@@ -67,7 +64,6 @@ int main(int argc, char **argv) {
   std::cout << list.DebugString() << std::endl;
   return 0;
 }
-
 
 // 使用 stl list 来实现
 // void reverse(std::list<int>& list) {

@@ -7,22 +7,29 @@ class A {
  public:
   explicit A(std::string _name) {
     this->name = _name;
-    std::cout << this->name << ":" << "A(std::string _name) called" << std::endl;
+    std::cout << this->name << ":"
+              << "A(std::string _name) called" << std::endl;
   }
   A(const A& a) {
     this->name = a.name;
-    std::cout << this->name << ":" << "A(const A& a) called" << std::endl;
+    std::cout << this->name << ":"
+              << "A(const A& a) called" << std::endl;
   }
   A(const A&& a) {
     this->name = std::move(a.name);
-    std::cout << this->name << ":" << "A(const A&& a) called" << std::endl;
+    std::cout << this->name << ":"
+              << "A(const A&& a) called" << std::endl;
   }
   A& operator=(const A& a) {
     this->name = a.name;
-    std::cout << this->name << ":" << "operator =(const A& a) called" << std::endl;
+    std::cout << this->name << ":"
+              << "operator =(const A& a) called" << std::endl;
     return *this;
   }
-  ~A() { std::cout << this->name << ":" << "~A() called" << std::endl; }
+  ~A() {
+    std::cout << this->name << ":"
+              << "~A() called" << std::endl;
+  }
 
  private:
   std::string name;

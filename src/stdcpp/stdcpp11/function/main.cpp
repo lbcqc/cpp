@@ -10,7 +10,7 @@ int main(int argc, char *argv[]) {
   auto f2 = std::bind(f, std::ref(a), std::placeholders::_1);  // bind a by reference
   a = f(a, b);
   std::cout << "f(a,b) = " << a << std::endl;
-  std::cout << "f(1,2) = " << f(3,10) << std::endl;
+  std::cout << "f(1,2) = " << f(3, 10) << std::endl;
   std::cout << "f2(b) = " << f2(b) << std::endl;
   return 0;
 }

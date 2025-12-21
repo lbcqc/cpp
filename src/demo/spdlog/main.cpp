@@ -1,13 +1,12 @@
 //
 // Created by root on 4/21/24.
 //
-#include "spdlog/spdlog.h"
 #include "spdlog/sinks/basic_file_sink.h"
+#include "spdlog/spdlog.h"
 
-int main()
-{
-//  auto logger = spdlog::basic_logger_mt("file_logger", "logs/file.log");
-//  spdlog::set_default_logger(logger);
+int main() {
+  //  auto logger = spdlog::basic_logger_mt("file_logger", "logs/file.log");
+  //  spdlog::set_default_logger(logger);
 
   spdlog::info("Welcome to spdlog!");
   spdlog::error("Some error message with arg: {}", 1);
@@ -18,7 +17,7 @@ int main()
   spdlog::info("Positional args are {1} {0}..", "too", "supported");
   spdlog::info("{:<30}", "left aligned");
 
-  spdlog::set_level(spdlog::level::debug); // Set global log level to debug
+  spdlog::set_level(spdlog::level::debug);  // Set global log level to debug
   spdlog::debug("This message should be displayed..");
 
   // change log pattern

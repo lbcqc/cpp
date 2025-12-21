@@ -1,11 +1,11 @@
 //
 // Created by root on 2025/8/31.
 //
+#include <climits>
+#include <iostream>
 #include <memory>
 #include <queue>
 #include <stack>
-#include <iostream>
-#include <climits>
 
 using namespace std;
 
@@ -54,7 +54,6 @@ using namespace std;
 //   }
 // };
 
-
 // 使用最小值栈进行辅助
 // class MinStack {
 // private:
@@ -92,29 +91,22 @@ struct Node {
   int min_val;
 };
 class MinStack {
-private:
+ private:
   stack<Node> stk;
-public:
-  MinStack() {
-    stk.push(Node{.val = INT32_MAX, .min_val = INT32_MAX});
-  }
+
+ public:
+  MinStack() { stk.push(Node{.val = INT32_MAX, .min_val = INT32_MAX}); }
 
   void push(int val) {
-    int min_val = val<stk.top().min_val? val:stk.top().min_val;
+    int min_val = val < stk.top().min_val ? val : stk.top().min_val;
     stk.push(Node{.val = val, .min_val = min_val});
   }
 
-  void pop() {
-    stk.pop();
-  }
+  void pop() { stk.pop(); }
 
-  int top() {
-    return stk.top().val;
-  }
+  int top() { return stk.top().val; }
 
-  int getMin() {
-    return stk.top().min_val;
-  }
+  int getMin() { return stk.top().min_val; }
 };
 
 int main() {

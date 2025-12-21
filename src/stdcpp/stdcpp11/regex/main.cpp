@@ -4,8 +4,8 @@
 #include <iostream>
 #include <memory>
 #include <regex>
-#include <unordered_map>
 #include <string>
+#include <unordered_map>
 
 struct Request {
   // request method, POST, GET; path; HTTP version
@@ -42,14 +42,14 @@ class ServerBase {
       std::regex method_regex("(GET|POST) ([/0-9_a-zA-Z]*) (HTTP/[0-9].[0-9])");
       std::smatch base_match;
       bool match = std::regex_match(str, base_match, method_regex);
-      req.method =  base_match[1].str();
-      req.path =  base_match[2].str();
-      req.http_version =  base_match[3].str();
+      req.method = base_match[1].str();
+      req.path = base_match[2].str();
+      req.http_version = base_match[3].str();
       // read next line
       getline(stream, str);
     }
     // parse http header
-    while(!str.empty()) {
+    while (!str.empty()) {
       std::regex method_regex("([a-z_A-Z]*) ([0-9a-zA-Z]*)");
       std::smatch base_match;
       std::regex_match(str, base_match, method_regex);
@@ -57,7 +57,7 @@ class ServerBase {
       // read next line
       getline(stream, str);
     }
-    //req.content(stream);
+    // req.content(stream);
     return req;
   }
 };
@@ -95,8 +95,7 @@ void start_server(SERVER_TYPE& server) {
   server.start();
 }
 
-int main(int argc, char **argv)
-{
+int main(int argc, char** argv) {
   ServerBase<void> sb;
   start_server(sb);
   return 0;

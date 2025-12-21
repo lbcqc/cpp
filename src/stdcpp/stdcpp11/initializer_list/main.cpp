@@ -58,7 +58,8 @@ void printf3(T value, Ts... args) {
 int main(int argc, char *argv[]) {
   // array init list
   int arr[] = {1, 2, 3, 4, 5, 6};
-  std::cout << "array init list: " << "arr[5]: " << arr[5] << std::endl;
+  std::cout << "array init list: "
+            << "arr[5]: " << arr[5] << std::endl;
 
   // POD init list
   pod a = {1, 2};

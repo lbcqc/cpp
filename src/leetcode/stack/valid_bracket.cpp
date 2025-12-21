@@ -2,10 +2,10 @@
 // Created by root on 2025/8/30.
 //
 // https://leetcode.cn/problems/valid-parentheses/
-#include <string>
-#include <stack>
-#include <map>
 #include <array>
+#include <map>
+#include <stack>
+#include <string>
 using namespace std;
 // class Solution {
 // public:
@@ -34,7 +34,6 @@ using namespace std;
 //   }
 // };
 
-
 // class Solution {
 // public:
 //   bool isValid(string s) {
@@ -52,18 +51,21 @@ using namespace std;
 
 // 耗时最优
 class Solution {
-public:
+ public:
   bool isValid(string s) {
-    array<char,256> match = {0};
+    array<char, 256> match = {0};
     match['('] = ')';
     match['['] = ']';
     match['{'] = '}';
     stack<char> stk;
-    for (auto c:s) {
+    for (auto c : s) {
       char tmp = match[c];
-      if (tmp != '\0') stk.push(tmp);
-      else if (!stk.empty() && stk.top() == c) stk.pop();
-      else return false;
+      if (tmp != '\0')
+        stk.push(tmp);
+      else if (!stk.empty() && stk.top() == c)
+        stk.pop();
+      else
+        return false;
     }
     return stk.empty();
   }

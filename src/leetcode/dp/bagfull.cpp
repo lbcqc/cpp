@@ -6,25 +6,27 @@
 // 01背包方程：f(n,w) = max(f(n-1,2), f(n-1, w-weights[n]+values[n]))
 // 完全背包方程：f(n,w) = max(f(n-1,2), f(n, w-weights[n]+values[n]))
 // 可以看到，只是在选中 n 的时候，还能再选 n，而不是只能从 n-1 里面选
+#include <algorithm>
 #include <iostream>
 #include <vector>
-#include <algorithm>
 using namespace std;
 
 int main() {
   int goods_num;
   int bag_weight;
   cin >> goods_num >> bag_weight;
-  vector<int> goods_weight(goods_num+1, 0);
-  vector<int> goods_values(goods_num+1, 0);
-  for (int i=1; i <= goods_num; i++) {
+  vector<int> goods_weight(goods_num + 1, 0);
+  vector<int> goods_values(goods_num + 1, 0);
+  for (int i = 1; i <= goods_num; i++) {
     cin >> goods_weight[i] >> goods_values[i];
   }
-  vector<vector<int>> dp(goods_num+1, vector<int>(bag_weight+1, 0));
-  for (int i = 1; i <=goods_num; i++) {
-    for (int j=0; j <= bag_weight; j++ ) {
-      if (j < goods_weight[i]) dp[i][j] = dp[i-1][j];
-      else dp[i][j] = max(dp[i-1][j], dp[i][j-goods_weight[i]] + goods_values[i]);
+  vector<vector<int>> dp(goods_num + 1, vector<int>(bag_weight + 1, 0));
+  for (int i = 1; i <= goods_num; i++) {
+    for (int j = 0; j <= bag_weight; j++) {
+      if (j < goods_weight[i])
+        dp[i][j] = dp[i - 1][j];
+      else
+        dp[i][j] = max(dp[i - 1][j], dp[i][j - goods_weight[i]] + goods_values[i]);
     }
   }
   cout << dp[goods_num][bag_weight];

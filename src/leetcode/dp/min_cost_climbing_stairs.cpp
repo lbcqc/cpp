@@ -9,14 +9,14 @@
 #include <vector>
 using namespace std;
 class Solution {
-public:
+ public:
   int minCostClimbingStairs(vector<int>& cost) {
-    int ans_pre_2 = 0; // ans[i-2]
-    int ans_pre_1 = 0; // ans[i-1]
-    int ans = 0; // ans[i]
-    int i = 2; // 从 2 开始
+    int ans_pre_2 = 0;  // ans[i-2]
+    int ans_pre_1 = 0;  // ans[i-1]
+    int ans = 0;        // ans[i]
+    int i = 2;          // 从 2 开始
     for (; i <= cost.size(); i++) {
-      ans = min(cost[i-2]+ans_pre_2, cost[i-1]+ans_pre_1);
+      ans = min(cost[i - 2] + ans_pre_2, cost[i - 1] + ans_pre_1);
       ans_pre_2 = ans_pre_1;
       ans_pre_1 = ans;
     }
@@ -25,11 +25,11 @@ public:
 };
 
 class Solution2 {
-public:
+ public:
   int minCostClimbingStairs(vector<int>& cost) {
-    vector<int> ans(cost.size()+1, 0);
+    vector<int> ans(cost.size() + 1, 0);
     for (int i = 2; i <= cost.size(); i++) {
-      ans[i] = min(cost[i-2]+ans[i-2], cost[i-1]+ans[i-1]);
+      ans[i] = min(cost[i - 2] + ans[i - 2], cost[i - 1] + ans[i - 1]);
     }
     return ans[cost.size()];
   }

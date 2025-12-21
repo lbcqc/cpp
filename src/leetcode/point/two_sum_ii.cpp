@@ -6,7 +6,7 @@
 #include <vector>
 using namespace std;
 class Solution {
-public:
+ public:
   vector<int> twoSum(vector<int>& numbers, int target) {
     int left = 0;
     int right = numbers.size() - 1;
@@ -17,10 +17,10 @@ public:
         continue;
       }
       if (sum > target) {
-        right --;
+        right--;
         continue;
       }
-      return {left+1, right+1};
+      return {left + 1, right + 1};
     }
     return {};
   }

@@ -11,10 +11,10 @@
 // pos 为 -1 或者链表中的一个 有效索引 。
 
 struct ListNode {
-    int val;
-    ListNode *next;
-    ListNode(int x) : val(x), next(nullptr) {}
-    ListNode(int x, ListNode* _next): val(x), next(_next) {}
+  int val;
+  ListNode *next;
+  ListNode(int x) : val(x), next(nullptr) {}
+  ListNode(int x, ListNode *_next) : val(x), next(_next) {}
 };
 
 // 标记法
@@ -50,10 +50,10 @@ struct ListNode {
 
 // hash 记录法
 class Solution {
-public:
+ public:
   bool hasCycle(ListNode *head) {
-    std::unordered_set<ListNode*> seen;
-    while (head!=nullptr) {
+    std::unordered_set<ListNode *> seen;
+    while (head != nullptr) {
       if (seen.count(head)) {
         return true;
       }
@@ -72,10 +72,10 @@ int main(int argc, char **argv) {
   ListNode head(0, &node1);
 
   Solution s;
-  std::cout << s.hasCycle(&head) << std::endl; // expect false
+  std::cout << s.hasCycle(&head) << std::endl;  // expect false
 
   // create cycle
   node4.next = &node2;
-  std::cout << s.hasCycle(&head) << std::endl; // expect true
+  std::cout << s.hasCycle(&head) << std::endl;  // expect true
   return 0;
 }

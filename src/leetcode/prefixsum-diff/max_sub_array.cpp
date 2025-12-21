@@ -6,9 +6,9 @@
 // 越小越好，故而，我们可以记录 r 前面的最小子序列号 技巧
 // 技巧1：子序列和问题，由于没有任何数字也算一个序列，为处理这个边界，i 从 1 开始更方便
 // 技巧2：ans 要使用最小数字开始
-#include <vector>
-#include <climits>
 #include <algorithm>
+#include <climits>
+#include <vector>
 using namespace std;
 
 class Solution {

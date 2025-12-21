@@ -42,7 +42,7 @@ class awaiter {
   bool await_suspend(std::coroutine_handle<task::promise_type> handle) {
     std::cout << "8. execute awaiter.await_suspend()\n";
     std::thread([handle]() mutable {
-      std::cout << "child thread id="<< std::this_thread::get_id()<< std::endl;
+      std::cout << "child thread id=" << std::this_thread::get_id() << std::endl;
       handle();
     }).detach();
     std::cout << "9. a new thread lauched, and will return back to caller\n";
@@ -59,7 +59,7 @@ task test() {
 }
 
 int main(int argc, char **argv) {
-  std::cout << "father thread id="<< std::this_thread::get_id()<< std::endl;
+  std::cout << "father thread id=" << std::this_thread::get_id() << std::endl;
   test();
   std::cout << "10.come back to caller becuase of co_await awaiter\n";
   std::this_thread::sleep_for(std::chrono::seconds(1));

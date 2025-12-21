@@ -9,7 +9,7 @@ using namespace std;
 class Solution {
  public:
   vector<vector<int>> combine(int n, int k) {
-    recur(n,k,0);
+    recur(n, k, 0);
     return ans;
   }
 
@@ -18,7 +18,7 @@ class Solution {
   vector<int> choose;
   void recur(int n, int k, int i) {
     // 剪枝优化
-    if (choose.size() > k || n-i + choose.size() < k) {
+    if (choose.size() > k || n - i + choose.size() < k) {
       return;
     }
     // 选中
@@ -30,7 +30,7 @@ class Solution {
     if (i == n) {
       return;
     }
-    choose.push_back(i+1);
+    choose.push_back(i + 1);
     recur(n, k, i + 1);
     choose.pop_back();
     recur(n, k, i + 1);

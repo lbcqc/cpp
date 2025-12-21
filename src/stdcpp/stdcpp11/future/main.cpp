@@ -1,13 +1,13 @@
 //
 // Created by root on 4/20/24.
 //
-#include <thread>
+#include <future>
 #include <iostream>
 #include <mutex>
-#include <future>
+#include <thread>
 
 int main(int argc, char **argv) {
-  std::packaged_task<int()> task([]()->int{
+  std::packaged_task<int()> task([]() -> int {
     std::cout << "task done" << std::endl;
     return 10;
   });
@@ -16,6 +16,6 @@ int main(int argc, char **argv) {
   std::thread(std::move(task)).detach();
   std::cout << "wait..." << std::endl;
   v.wait();
-  std::cout << v.get()<< std::endl;
+  std::cout << v.get() << std::endl;
   return 0;
 }

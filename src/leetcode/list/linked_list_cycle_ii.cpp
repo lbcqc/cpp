@@ -14,7 +14,7 @@ struct ListNode {
   int val;
   ListNode *next;
   ListNode(int x) : val(x), next(nullptr) {}
-  ListNode(int x, ListNode* _next): val(x), next(_next) {}
+  ListNode(int x, ListNode *_next) : val(x), next(_next) {}
 };
 
 // 快慢指针法
@@ -23,15 +23,15 @@ struct ListNode {
 //
 // l + p + l = l + p + k*r - p = l + kr
 class Solution {
-public:
+ public:
   ListNode *detectCycle(ListNode *head) {
     ListNode *fast = head;
     ListNode *slow = head;
     int fast_len = 0;
     int slow_len = 0;
     while (fast->next && fast->next->next) {
-      fast_len+=2;
-      slow_len+=1;
+      fast_len += 2;
+      slow_len += 1;
       slow = slow->next;
       fast = fast->next->next;
       if (slow == fast) {
@@ -56,15 +56,14 @@ int main(int argc, char **argv) {
   Solution s;
   ListNode *detect = s.detectCycle(&head);
   if (detect != nullptr) {
-    std::cout << detect->val << std::endl; // expect false
+    std::cout << detect->val << std::endl;  // expect false
   }
-
 
   // create cycle
   node4.next = &node2;
   detect = s.detectCycle(&head);
   if (detect != nullptr) {
-    std::cout << detect->val << std::endl; // expect false
+    std::cout << detect->val << std::endl;  // expect false
   }
   return 0;
 }

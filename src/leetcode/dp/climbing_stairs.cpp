@@ -8,7 +8,7 @@
 #include <iostream>
 using namespace std;
 class Solution {
-public:
+ public:
   int climbStairs(int n) {
     int dp1 = 1;
     int dp2 = 2;

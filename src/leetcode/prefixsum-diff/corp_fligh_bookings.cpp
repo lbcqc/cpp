@@ -11,11 +11,11 @@
 using namespace std;
 
 class Solution {
-public:
+ public:
   vector<int> corpFlightBookings(vector<vector<int>>& bookings, int n) {
-    vector<int> d(n+1, 0);
-    for (const auto &booking: bookings) {
-      int start = booking[0] - 1; // 注意，传入的参数是从 1 开始的，需要偏移回来
+    vector<int> d(n + 1, 0);
+    for (const auto& booking : bookings) {
+      int start = booking[0] - 1;  // 注意，传入的参数是从 1 开始的，需要偏移回来
       int end = booking[1];
       int num = booking[2];
       d[start] += num;
@@ -24,7 +24,7 @@ public:
     vector<int> s(n, 0);
     s[0] = d[0];
     for (int i = 1; i < n; i++) {
-      s[i] = s[i-1] + d[i];
+      s[i] = s[i - 1] + d[i];
     }
     return s;
   }

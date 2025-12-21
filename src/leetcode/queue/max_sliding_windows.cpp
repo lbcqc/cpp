@@ -6,9 +6,9 @@
 // 每次从队列头部取最大值，判断其是否区间有效，如果无效则淘汰，重新取，直到从队头取到最新有效值。
 // 关键：单调队列，队列 back -> front 永远维持单调递增，每次新值从 back 开始插入并淘汰旧址值。
 
+#include <iostream>
 #include <queue>
 #include <vector>
-#include <iostream>
 
 using namespace std;
 
@@ -39,9 +39,9 @@ class Solution {
 };
 
 int main() {
-  vector<int> nums = {1,-1};
+  vector<int> nums = {1, -1};
   Solution s;
-  auto ans  = s.maxSlidingWindow(nums, 1);
+  auto ans = s.maxSlidingWindow(nums, 1);
   for (auto a : ans) {
     cout << a << " ";
   }

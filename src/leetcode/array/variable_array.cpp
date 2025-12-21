@@ -5,14 +5,14 @@
 #include <memory>
 
 class VariableArray {
-private:
+ private:
   std::unique_ptr<int[]> _data;
   int _size;
   int _cap;
   static const int min_cap = 16;
-private:
-  void reaclloc(int new_cap) {
 
+ private:
+  void reaclloc(int new_cap) {
     std::unique_ptr<int[]> new_data = std::make_unique<int[]>(this->_cap);
     for (int i = 0; i < this->_size; i++) {
       new_data[i] = this->_data[i];
@@ -20,8 +20,8 @@ private:
     this->_data = std::move(new_data);
   }
 
-public:
-  explicit VariableArray(const int cap = VariableArray::min_cap):_cap(cap) {
+ public:
+  explicit VariableArray(const int cap = VariableArray::min_cap) : _cap(cap) {
     // 不允许创建容量为0的数组
     if (this->_cap < VariableArray::min_cap) {
       this->_cap = VariableArray::min_cap;
@@ -31,7 +31,7 @@ public:
   }
   void push_back(const int val) {
     if (this->_size == this->_cap) {
-      this->reaclloc(this->_cap *=2);
+      this->reaclloc(this->_cap *= 2);
     }
     this->_data[this->_size++] = val;
   }
@@ -47,15 +47,11 @@ public:
     }
     return this->_data[i];
   }
-  [[nodiscard]] int size() const {
-    return this->_size;
-  }
-  [[nodiscard]] int cap() const {
-    return this->_cap;
-  }
+  [[nodiscard]] int size() const { return this->_size; }
+  [[nodiscard]] int cap() const { return this->_cap; }
 };
 
-int main(int argc, char **argv) {
+int main(int argc, char** argv) {
   VariableArray var;
   var.push_back(10);
   std::cout << "var[0]: " << var[0] << ", len: " << var.size() << ", cap: " << var.cap() << std::endl;

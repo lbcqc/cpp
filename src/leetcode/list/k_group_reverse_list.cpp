@@ -19,7 +19,7 @@ class Solution {
       return head;
     }
     if (head == nullptr) {
-        return head;
+      return head;
     }
     return reverseKGroupImpl(head, k);
   }
@@ -28,7 +28,7 @@ class Solution {
     ListNode sentinel;
     sentinel.next = head;
     ListNode *last_head = &sentinel;
-    while (head!=nullptr) {
+    while (head != nullptr) {
       ListNode *next_head = head;
       ListNode *next_end = getEnd(next_head, k);
       // 已经是最后一组，无需处理
@@ -47,13 +47,13 @@ class Solution {
   }
   //
   ListNode *getEnd(ListNode *head, int k) {
-    while (--k && head!=nullptr){
+    while (--k && head != nullptr) {
       head = head->next;
     }
     return head;
   }
   // 反转链表实现
-  void reverseImpl(ListNode *head, ListNode* stop) {
+  void reverseImpl(ListNode *head, ListNode *stop) {
     if (head == nullptr) {
       return;
     }
@@ -74,7 +74,7 @@ class Solution {
   // 打印链表
   void PrintList(ListNode *head) {
     std::cout << "head->";
-    while(head != nullptr) {
+    while (head != nullptr) {
       std::cout << head->val << "->";
       head = head->next;
     }

@@ -8,9 +8,9 @@
 // 方案二：基于方案一的推演，我们发现，整个数组最大值的左右两边，必需要遍历一遍，故而我们可以采用双指针，不断逼近最大值的同时做计算，此时接到的
 // 雨滴最终一定是有效的，因为最大值最后比如出现。
 //
-#include <vector>
-#include <stack>
 #include <iostream>
+#include <stack>
+#include <vector>
 using namespace std;
 
 // 方案 1：
@@ -54,26 +54,26 @@ using namespace std;
 
 // 方案二
 class Solution {
-public:
+ public:
   int trap(vector<int>& height) {
     if (height.empty()) {
       return 0;
     }
     int ans = 0;
     int left = 0;
-    int right = height.size()-1;
+    int right = height.size() - 1;
     int left_max = height[left];
     int right_max = height[right];
     while (left < right) {
       if (left_max < right_max) {
-        left ++;
+        left++;
         if (left_max > height[left]) {
           ans += (left_max - height[left]);
         } else {
           left_max = height[left];
         }
       } else {
-        right --;
+        right--;
         if (right_max > height[right]) {
           ans += (right_max - height[right]);
         } else {
@@ -87,7 +87,7 @@ public:
 
 int main() {
   Solution s;
-  vector<int> vec = {0,1,0,2,1,0,1,3,2,1,2,1};
+  vector<int> vec = {0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
   cout << s.trap(vec);
   return 0;
 }

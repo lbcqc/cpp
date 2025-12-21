@@ -19,10 +19,10 @@ int main(int argc, char *argv[]) {
     s.insert(it, *it - 1);
     it++;
   }
-  s.insert(s.begin(),1); // set no allow repeated value
-  s.insert(s.begin(),1);
-  s.insert(s.begin(),1);
-  s.insert(s.begin(),1);
+  s.insert(s.begin(), 1);  // set no allow repeated value
+  s.insert(s.begin(), 1);
+  s.insert(s.begin(), 1);
+  s.insert(s.begin(), 1);
   fmt::println("set count 1: {}", s.count(1));
   fmt::println("set after insert: {}", s);
   return 0;
