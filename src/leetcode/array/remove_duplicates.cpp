@@ -3,6 +3,10 @@
 //
 // 26. 删除有序数组中的重复项 https://leetcode.cn/problems/remove-duplicates-from-sorted-array/
 //
+// 题解：使用快慢指针，快指针遍历数组，慢指针记录不重复的元素
+// 快指针遇到不重复的元素，则将快指针的元素赋值给慢指针的下一个元素
+// 最后返回慢指针的下一个元素，即为不重复元素的个数
+// 注意：最后需要将数组resize为不重复元素的个数
 
 #include <iostream>
 #include <vector>
@@ -24,7 +28,8 @@ class Solution {
         nums[++index] = nums[i];
       }
     }
-    return index + 1;
+    nums.resize(index + 1);
+    return nums.size();
   }
 };
 
