@@ -1,13 +1,13 @@
 cmake_minimum_required(VERSION 3.26)
 project(leetcode CXX)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 23)
 
 include(${CMAKE_HOME_DIRECTORY}/cmake/spdlog.cmake)
 include(${CMAKE_HOME_DIRECTORY}/cmake/fmtlib.cmake)
 
 add_executable(leetcode-demo_template ./demo_template/main.cpp)
-target_link_libraries(leetcode-demo_template PRIVATE fmt::fmt)
+target_link_libraries(leetcode-demo_template PRIVATE spdlog::spdlog)
 
 # array
 add_executable(leetcode-array-binary_search ./array/binary_search.cpp)
