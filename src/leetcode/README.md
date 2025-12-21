@@ -11,7 +11,7 @@
   - binary_search：[704. 二分查找](https://leetcode.cn/problems/binary-search/description/)
   - remove_duplicate: [26. 删除有序数组中的重复项](https://leetcode.cn/problems/remove-duplicates-from-sorted-array/)
   - plus_one: [66. 加一](https://leetcode.cn/problems/plus-one/description/)
-- heap: 堆，优先级队列，默认为最小值堆，对应的比较函数为 less
+- heap: 堆，优先级队列，默认为最大值堆，对应的比较函数为 less
   - max_sliding_windows: [239. 滑动窗口最大值](https://leetcode.cn/problems/sliding-window-maximum/description/)
 - list
   - reverse_list: [206. 反转链表](https://leetcode.cn/problems/reverse-linked-list/)

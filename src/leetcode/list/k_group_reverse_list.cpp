@@ -47,8 +47,7 @@ class Solution {
   }
   //
   ListNode *getEnd(ListNode *head, int k) {
-    k--;
-    while (k-- && head!=nullptr){
+    while (--k && head!=nullptr){
       head = head->next;
     }
     return head;
@@ -83,8 +82,8 @@ class Solution {
   }
 };
 int main(int argc, char **argv) {
-  // ListNode node5(5);
-  ListNode node4(4);
+  ListNode node5(5);
+  ListNode node4(4, &node5);
   ListNode node3(3, &node4);
   ListNode node2(2, &node3);
   ListNode node1(1, &node2);

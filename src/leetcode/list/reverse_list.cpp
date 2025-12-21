@@ -67,3 +67,35 @@ int main(int argc, char **argv) {
   std::cout << list.DebugString() << std::endl;
   return 0;
 }
+
+
+// 使用 stl list 来实现
+// void reverse(std::list<int>& list) {
+//   auto begin = list.begin();
+//   auto end = list.end();
+//   --end;
+//   while (begin != end) {
+//     std::swap(*begin, *end);
+//     ++begin;
+//     if (begin == end) break; // 奇数个数
+//     --end;
+//   }
+// }
+//
+// 使用辅助队列来实现
+// void reverse(std::list<int>& list) {
+//   std::list<int> head;
+//   for (int & it : list) {
+//     head.push_front(it);
+//   }
+//   list = head;
+// }
+//
+// int main()
+// {
+//   std::list<int> nums = {1,3,-1,-3,5,3,6,7};
+//   fmt::print("nums {}\n", nums);
+//   reverse(nums);
+//   fmt::print("reverse {}\n", nums);
+//   return 0;
+// }

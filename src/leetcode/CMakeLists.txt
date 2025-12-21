@@ -4,8 +4,10 @@ project(leetcode CXX)
 set(CMAKE_CXX_STANDARD 17)
 
 include(${CMAKE_HOME_DIRECTORY}/cmake/spdlog.cmake)
+include(${CMAKE_HOME_DIRECTORY}/cmake/fmtlib.cmake)
 
-add_library(leetcode-demo_template ./demo_template/main.cpp)
+add_executable(leetcode-demo_template ./demo_template/main.cpp)
+target_link_libraries(leetcode-demo_template PRIVATE fmt::fmt)
 
 # array
 add_executable(leetcode-array-binary_search ./array/binary_search.cpp)
@@ -16,6 +18,7 @@ add_library(leetcode-array-plus_one ./array/plus_one.cpp)
 
 # heap
 add_executable(leetcode-heap-max_sliding_windwos ./heap/max_sliding_windwos.cpp)
+target_link_libraries(leetcode-heap-max_sliding_windwos PRIVATE fmt::fmt)
 
 # list
 add_executable(leetcode-list-reverse_list ./list/reverse_list.cpp)
