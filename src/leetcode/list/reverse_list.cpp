@@ -23,20 +23,31 @@ class List {
   List(std::shared_ptr<ListNode> next) { head = std::make_unique<ListNode>(0, next); }
 
  public:
+  // void Reverse() {
+  //   std::stack<std::shared_ptr<ListNode>> stack;
+  //   auto last = head;
+  //   while (last->next != nullptr) {
+  //     stack.push(last->next);
+  //     last = last->next;
+  //   }
+  //   last = head;
+  //   while (!stack.empty()) {
+  //     last->next = stack.top();
+  //     stack.pop();
+  //     last = last->next;
+  //   }
+  //   last->next = nullptr;
+  // }
+  //无需任何辅助实现
   void Reverse() {
-    std::stack<std::shared_ptr<ListNode>> stack;
-    auto last = head;
-    while (last->next != nullptr) {
-      stack.push(last->next);
-      last = last->next;
+    std::shared_ptr<ListNode> next = head->next;
+    head->next = nullptr; // 这里必须要将 list 先清空，然后再通过 Next 遍历重新从头节点插入
+    while (nullptr != next) {
+      std::shared_ptr<ListNode> now = next;
+      next = next->next;
+      now->next = head->next;
+      head->next = now;
     }
-    last = head;
-    while (!stack.empty()) {
-      last->next = stack.top();
-      stack.pop();
-      last = last->next;
-    }
-    last->next = nullptr;
   }
   std::string DebugString() {
     std::stringstream ss;
