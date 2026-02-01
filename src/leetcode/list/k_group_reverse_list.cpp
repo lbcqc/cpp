@@ -4,6 +4,9 @@
 #include <iostream>
 #include <variant>
 
+// 题解：关键是通过鸭子节点 last_head，再遍历链表，寻找 Next_head 和 next_end，当 next_end 为 nullptr 时退出
+// 当 next_end 不为空时，从 next_head 开始遍历到 Next_end，将节点逐步插入到 last_head 之间，这样就反转了了一组
+
 struct ListNode {
   int val;
   ListNode *next;
@@ -37,8 +40,7 @@ class Solution {
         break;
       }
       // 拼接下一组
-      reverseImpl(next_head, next_end->next);
-      last_head->next = next_end;
+      reverseImpl(last_head, next_end->next);
       last_head = next_head;
       head = last_head->next;
     }
@@ -57,19 +59,16 @@ class Solution {
     if (head == nullptr) {
       return;
     }
-    // 跳过第一个元素
-    ListNode sentinel;
-    sentinel.next = head;
-    ListNode *tail = head;
-    head = head->next;
+    ListNode *next = head->next;
+    head->next = stop;
     // 从第二个开始反转
-    while (head != stop) {
-      ListNode *next = head->next;
-      head->next = sentinel.next;
-      sentinel.next = head;
-      head = next;
+    while (next != stop) {
+      ListNode *now = next;
+      next = next->next;
+      // 插入头结点
+      now->next = head->next;
+      head->next = now;
     }
-    tail->next = stop;
   }
   // 打印链表
   void PrintList(ListNode *head) {
