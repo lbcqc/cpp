@@ -56,6 +56,7 @@ add_executable(leetcode-stack-min_stack ./stack/min_stack.cpp)
 add_executable(leetcode-stack-reverse_polish_notation ./stack/reverse_polish_notation.cpp)
 add_executable(leetcode-stack-largest_rectangle_area ./stack/largest_rectangle_area.cpp)
 add_library(leetcode-stack-largest_rectangle ./stack/largest_rectangle.cpp)
+add_executable(leetcode-stack-calculator-iii ./stack/basic_calculator_iii.cpp)
 
 # tree
 add_library(leetcode-tree-invert_tree ./tree/invert_tree.cpp)
