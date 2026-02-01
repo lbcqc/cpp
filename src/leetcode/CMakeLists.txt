@@ -57,6 +57,8 @@ add_executable(leetcode-stack-reverse_polish_notation ./stack/reverse_polish_not
 add_executable(leetcode-stack-largest_rectangle_area ./stack/largest_rectangle_area.cpp)
 add_library(leetcode-stack-largest_rectangle ./stack/largest_rectangle.cpp)
 add_executable(leetcode-stack-calculator-iii ./stack/basic_calculator_iii.cpp)
+add_executable(leetcode-stack-asteroids ./stack/asteroids.cpp)
+target_link_libraries(leetcode-stack-asteroids PRIVATE spdlog::spdlog)
 
 # tree
 add_library(leetcode-tree-invert_tree ./tree/invert_tree.cpp)
