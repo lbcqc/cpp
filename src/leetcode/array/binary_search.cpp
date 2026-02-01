@@ -36,7 +36,7 @@ class BinarySearch : public Searcher<T> {
   int SearchImplByCircle(std::vector<T> &vec, int val, int left, int right) noexcept {
     while (left <= right) {
       int mid = (left + right) / 2;
-      if (val == vec[mid]) {
+      if (val == vec[mid]) {9
         return mid;
       }
       if (val < vec[mid]) {

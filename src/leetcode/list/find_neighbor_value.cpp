@@ -1,6 +1,8 @@
 //
 // Created by Administrator on 2025/8/24.
 //
+// [邻值查找](https://www.acwing.com/problem/content/description/138/)
+// 
 #include <algorithm>
 #include <cstdio>
 #include <exception>
@@ -86,10 +88,10 @@ int main() {
     index[i] = i;
   }
   std::sort(index, index + num, [&](int idi, int idj) -> bool { return vals[idi] < vals[idj]; });
-  // for (int i = 0; i < num; i ++) {
-  //   printf("%d ", index[i]);
-  // }
-  // printf("\n");
+  for (int i = 0; i < num; i ++) {
+    printf("%d ", index[i]);
+  }
+  printf("\n");
   for (int i = 0; i < num; i++) {
     nodes[index[i]].val = vals[index[i]];
     nodes[index[i]].index = index[i];

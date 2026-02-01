@@ -9,6 +9,7 @@
 // right，此时将当前值出栈，然后新栈顶的位置为旧栈顶left，计算面积即可。注意当遍历完全部数后，栈不为空，则栈
 // 中所有元素的 right = size() - 1；
 // 此题为单调栈解法：其栈元素，必须保持单调递增，如果遇到破坏此递增关系的值，弹栈计算并更新结果。
+#include <algorithm>
 #include <iostream>
 #include <stack>
 #include <vector>
@@ -36,7 +37,7 @@ class Solution {
     stk.pop();
     int left_index = stk.empty() ? -1 : stk.top();
     int width = right_index - left_index;
-    max_area = max_area > width * height ? max_area : width * height;
+    max_area = std::max(max_area, width * height);
   }
 };
 

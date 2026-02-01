@@ -3,8 +3,8 @@
 //
 // 52. 携带研究材料（第七期模拟笔试） https://kamacoder.com/problempage.php?pid=1052
 // 题解：完全背包问题，只需在 01 背包的基础上做修改
-// 01背包方程：f(n,w) = max(f(n-1,2), f(n-1, w-weights[n]+values[n]))
-// 完全背包方程：f(n,w) = max(f(n-1,2), f(n, w-weights[n]+values[n]))
+// 01背包方程：f(n,w) = max(f(n-1,w), f(n-1, w-weights[n])+values[n])
+// 完全背包方程：f(n,w) = max(f(n-1,w), f(n, w-weights[n])+values[n])
 // 可以看到，只是在选中 n 的时候，还能再选 n，而不是只能从 n-1 里面选
 #include <algorithm>
 #include <iostream>

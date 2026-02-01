@@ -1,6 +1,15 @@
 //
 // Created by Administrator on 2025/8/23.
 //
+// 变长数组
+// 题解：使用 unique_ptr 来管理数组，使用 realloc 来动态调整数组容量
+// 使用 push_back 来添加元素，使用 pop_back 来删除元素
+// 使用 operator[] 来访问元素
+// 使用 size() 来获取数组大小
+// 使用 cap() 来获取数组容量
+// 注意：本题需要使用 C++17 的特性，使用 unique_ptr 来管理数组
+// 注意：本题需要使用 C++17 的特性，使用 unique_ptr 来管理数组
+
 #include <iostream>
 #include <memory>
 

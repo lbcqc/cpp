@@ -12,28 +12,11 @@
 #include "spdlog/spdlog.h"
 
 int main() {
-  std::vector<int> nums = {2, 2, 2};
-  int target = 4;
-  std::map<int, std::vector<int>> m;
-  std::vector<std::vector<int>> ans;
-  for (int i = 0; i < nums.size(); i++) {
-    // 查找匹配
-    int match_value = target - nums[i];
-    if (m.find(match_value) != m.end()) {
-      auto match_indexs = m[match_value];
-      for (auto match_index : match_indexs) {
-        std::vector<int> tmp = {match_index, i};
-        ans.push_back(tmp);
-      }
-    }
-    // 入map
-    m[nums[i]].push_back(i);
-    // if (m.find(nums[i]) != m.end()) {
-    //
-    // } else {
-    //   m[nums[i]] = std::vector<int>(i);
-    // }
+  std::list<int> l = {1, 2, 3, 4, 5};
+  std::_List_iterator<int> a2 = find(l.begin(), l.end(), 2);
+  std::_List_iterator<int> a4 = find(l.begin(), l.end(), 4);
+  for (auto it = a2; it != a4; it++) {
+    spdlog::info("{}->", *it);
   }
-  spdlog::info("ans: {}", ans);
   return 0;
 }
