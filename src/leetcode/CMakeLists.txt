@@ -78,3 +78,5 @@ add_executable(leetcode-dp-bagfull dp/bagfull.cpp)
 # greedy
 add_executable(leetcodt-greedy_wiggle_max_length greedy/wiggle_max_length.cpp)
 add_executable(leetcode-greedy_max_sub_array greedy/max_sub_array.cpp)
+add_executable(leetcode-greedy_erase_overlap_intervals greedy/erase_overlap_intervals.cpp)
+add_executable(leetcode-greedy_min_meeting_rooms greedy/min_meeting_rooms.cpp)
