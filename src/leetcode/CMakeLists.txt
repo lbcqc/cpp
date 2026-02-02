@@ -74,3 +74,6 @@ add_library(leetcode-dp-min_cost_climbing_stairs dp/min_cost_climbing_stairs.cpp
 add_executable(leetcode-dp-climbing_stairs_ii dp/climbing_stairs_ii.cpp)
 add_executable(leetcode-dp-bag01 dp/bag01.cpp)
 add_executable(leetcode-dp-bagfull dp/bagfull.cpp)
+
+# greedy
+add_executable(leetcodt-greedy_wiggle_max_length greedy/wiggle_max_length.cpp)
