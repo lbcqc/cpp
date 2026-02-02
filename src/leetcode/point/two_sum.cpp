@@ -2,9 +2,8 @@
 // Created by root on 2025/9/13.
 //
 // [1. 两数之和](https://leetcode.cn/problems/two-sum/description/)
-// 题解 1：使用 x + y = target, y = target-x, 只需要使用 Hash 来记录过往x的信息，每次遍历时去寻找 target-x
-// 是否存在即可。O(n) 题解 2：先排序，再使用左右双指针进行遍历，如果 l + r > target，那么缩小 r，如果 < target，那么增大
-// l。O(nlogn)
+// 题解 1：使用 x + y = target, y = target-x, 只需要使用 Hash 来记录过往x的信息，每次遍历时去寻找 target-x 是否存在即可。O(n)
+// 题解 2：先排序，再使用左右双指针进行遍历，如果 l + r > target，那么缩小 r，如果 < target，那么增大 l。O(nlogn)
 #include <algorithm>
 #include <set>
 #include <unordered_map>
