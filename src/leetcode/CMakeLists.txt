@@ -64,6 +64,7 @@ target_link_libraries(leetcode-stack-asteroids PRIVATE spdlog::spdlog)
 add_library(leetcode-tree-invert_tree ./tree/invert_tree.cpp)
 add_library(leetcode-tree-check_bst ./tree/check_bst.cpp)
 add_library(leetcode-tree-min_depth ./tree/min_depth.cpp)
+add_library(leetcode-tree-lowest_common_ancestor ./tree/lowest_common_ancestor.cpp)
 
 # recursion
 add_executable(leetcode-recusion-calculate stack/calculate.cpp)
