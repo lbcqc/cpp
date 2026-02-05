@@ -75,6 +75,9 @@ add_executable(leetcode-dp-climbing_stairs_ii dp/climbing_stairs_ii.cpp)
 add_executable(leetcode-dp-bag01 dp/bag01.cpp)
 add_executable(leetcode-dp-bagfull dp/bagfull.cpp)
 
+# bitmap
+add_executable(leetcode-bitmap_longest_consecutive ./bitmap/longest_consecutive.cpp)
+
 # greedy
 add_executable(leetcodt-greedy_wiggle_max_length greedy/wiggle_max_length.cpp)
 add_executable(leetcode-greedy_max_sub_array greedy/max_sub_array.cpp)
