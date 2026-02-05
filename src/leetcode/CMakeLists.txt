@@ -77,6 +77,7 @@ add_executable(leetcode-dp-bagfull dp/bagfull.cpp)
 
 # bitmap
 add_executable(leetcode-bitmap_longest_consecutive ./bitmap/longest_consecutive.cpp)
+add_library(leetcode-bitmap_intersection_node ./bitmap/intersection_node.cpp)
 
 # greedy
 add_executable(leetcodt-greedy_wiggle_max_length greedy/wiggle_max_length.cpp)
