@@ -27,6 +27,7 @@ add_executable(leetcode-list-find_neighbor_value ./list/find_neighbor_value.cpp)
 add_executable(leetcode-list-linked_list_cycle ./list/linked_list_cycle.cpp)
 add_executable(leetcode-list-linked_list_cycle_ii ./list/linked_list_cycle_ii.cpp)
 add_library(leetcode-list-merge_two_list ./list/merge_two_list.cpp)
+add_executable(leetcode-list-palindrome_list ./list/palindrome_list.cpp)
 
 # point
 add_executable(leetcode-point-trap point/trap.cpp)
@@ -59,6 +60,7 @@ add_library(leetcode-stack-largest_rectangle ./stack/largest_rectangle.cpp)
 add_executable(leetcode-stack-calculator-iii ./stack/basic_calculator_iii.cpp)
 add_executable(leetcode-stack-asteroids ./stack/asteroids.cpp)
 target_link_libraries(leetcode-stack-asteroids PRIVATE spdlog::spdlog)
+add_library(leetcode-stack_daily_temperatures ./stack/daily_temperatures.cpp)
 
 # tree
 add_library(leetcode-tree-invert_tree ./tree/invert_tree.cpp)
