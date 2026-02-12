@@ -79,6 +79,7 @@ add_executable(leetcode-dp-climbing_stairs_ii dp/climbing_stairs_ii.cpp)
 add_executable(leetcode-dp-bag01 dp/bag01.cpp)
 add_executable(leetcode-dp-bagfull dp/bagfull.cpp)
 add_executable(leetcpde-dp-maximal_square dp/maximal_square.cpp)
+add_executable(leetcode-dp-rob ./dp/rob.cpp)
 
 # bitmap
 add_executable(leetcode-bitmap_longest_consecutive ./bitmap/longest_consecutive.cpp)
