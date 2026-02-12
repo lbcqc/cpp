@@ -92,3 +92,4 @@ add_executable(leetcode-greedy_erase_overlap_intervals greedy/erase_overlap_inte
 add_executable(leetcode-greedy_min_meeting_rooms greedy/min_meeting_rooms.cpp)
 add_executable(leetcode-greedy_partitional_labels greedy/partitional_labels.cpp)
 target_link_libraries(leetcode-greedy_partitional_labels PRIVATE spdlog::spdlog)
+add_executable(leetcode-greedy_numsIslands greedy/numIslands.cpp)
